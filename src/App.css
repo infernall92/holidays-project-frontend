@@ -1,0 +1,708 @@
+
+
+.center-align {
+    text-align: center;
+    margin: 3rem auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .left-align {
+    background-color:#ffffff;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    justify-content: left;
+    flex: 1;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Add shadow to the bottom */
+    h1 {
+      margin: 3rem;
+      margin-top: 3rem;
+    }
+}
+
+@media (max-width: 767px) {
+  .logout-container {
+    display: none;
+  }
+}
+
+  
+  
+  @media (max-width: 768px) {
+    .center-align, .left-align {
+      text-align: center;
+      justify-content: center;
+      /* h1 {
+        margin-top: 0.75rem;
+        color: #ffffff;
+        z-index: 1000;
+      } */
+    }
+  }
+
+  @media (max-width: 768px) {
+    .left-align h1 {
+      margin-top: 0.75rem;
+      color: #ffffff;
+      z-index: 999;
+      position: fixed;
+      top: 0;
+      left: 42%;
+      transform: translateX(-50%);
+      z-index: 1501;
+    }
+  }
+
+.input-form {
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  
+    /* Centering the form */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 32vh; /* Optional: Set height to center vertically */
+  }
+  
+  .input-form label {
+    display: block;
+    margin-bottom: 5px;
+  }
+  
+  .input-form input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  .input-form button {
+    width: 100%;
+    padding: 10px;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+.btn-logout {
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin: 3.2rem;
+}
+
+@media (max-width: 767px) {
+  .btn-logout {
+    position: static; /* Reset position for smaller screens */
+    margin: 1rem auto; /* Adjust margin for smaller screens */
+    display: block; /* Ensure button appears as block element on smaller screens */
+    text-align: center; /* Center-align button on smaller screens */
+  }
+}
+
+.logout-container-mobile {
+  background-color: transparent;
+}
+
+.btn-logout-mobile {
+  display: none;
+}
+
+@media (max-width:767px) {
+  .btn-logout-mobile {
+    display: flex;
+    position: absolute;
+    top: 1.5%; /* Adjust as needed */
+    left: 85%; /* Adjust as needed */
+    z-index: 10000;
+    margin-right: 2rem;
+  }
+}
+
+
+
+.form-container {
+  width: 600px;
+  max-width: 600px;
+  margin: 2rem;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+
+  /* Centering the form */
+  display: flex;
+  flex-direction: column;
+  align-items: stretch; /* Adjusted to stretch input fields */
+  justify-content: center;
+  height: auto; /* Adjusted to fit content */
+}
+
+@media (max-width: 767px) {
+  .form-container {
+    max-width: 100%; /* Set maximum width to full width on smaller screens */
+    margin: 1rem; /* Adjust margin for smaller screens */
+  }
+}
+
+.form-container label {
+  margin-bottom: 8px;
+}
+
+.form-container input {
+  padding: 8px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  margin-bottom: 12px;
+}
+
+/* .form-container button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  background-color: #007bff;
+  color: #fff;
+  cursor: pointer;
+}
+
+.form-container button:hover {
+  background-color: #0056b3;
+} */
+
+
+  /* -------------------------------------------- */
+  /* .bn5 {
+    padding: 0.6em 2em;
+    border: none;
+    outline: none;
+    color: rgb(255, 255, 255);
+    background: #111;
+    cursor: pointer;
+    position: relative;
+    z-index: 0;
+    border-radius: 10px;
+  }
+
+  .bn5-logout {
+    padding: 0.6em 2em;
+    margin: 2rem;
+    border: none;
+    outline: none;
+    color: rgb(255, 255, 255);
+    background: #111;
+    cursor: pointer;
+    border-radius: 10px;
+  }
+  
+  @media (min-width: 768px) {
+    .bn5-logout {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      margin: 2rem;
+    }
+  }
+  
+  .bn5:before {
+    content: "";
+    background: linear-gradient(
+      45deg,
+      #ff0000,
+      #ff7300,
+      #fffb00,
+      #48ff00,
+      #00ffd5,
+      #002bff,
+      #7a00ff,
+      #ff00c8,
+      #ff0000
+    );
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    background-size: 400%;
+    z-index: -1;
+    filter: blur(5px);
+    width: calc(100% + 4px);
+    height: calc(100% + 4px);
+    animation: glowingbn5 20s linear infinite;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+    border-radius: 10px;
+  }
+  
+  @keyframes glowingbn5 {
+    0% {
+      background-position: 0 0;
+    }
+    50% {
+      background-position: 400% 0;
+    }
+    100% {
+      background-position: 0 0;
+    }
+  }
+  
+  .bn5:active {
+    color: #000;
+  }
+  
+  .bn5:active:after {
+    background: transparent;
+  }
+  
+  .bn5:hover:before {
+    opacity: 1;
+  }
+  
+  .bn5:after {
+    z-index: -1;
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: #191919;
+    left: 0;
+    top: 0;
+    border-radius: 10px;
+  } */
+
+  .button-container {
+    position: absolute;
+    top: 20px; 
+    right: calc(70px + 20px * 3); /* Adjust as needed based on the width of buttons */
+    display: block;
+    /* align-items: center; */
+    /* justify-content: flex-end; */
+    margin: 2rem;
+    margin-right: 1rem;
+  }
+
+  .employees-btn, .calendar-btn, .requests-btn {
+    margin-inline: 1rem;
+  }
+
+  @media (max-width: 767px) {
+    .button-container {
+        position: static; /* Reset position for smaller screens */
+        right: auto; /* Reset right property for smaller screens */
+        display: none;
+        flex-wrap: wrap; /* Allow buttons to wrap to the next line */
+        justify-content: center; /* Center align buttons */
+        margin-top: 1rem; /* Adjust margin as needed */
+    }
+
+    .employees-btn, .calendar-btn, .requests-btn {
+        margin: 0.5rem; /* Adjust margin for smaller screens */
+    }
+}
+
+.admin h1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.content-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 2rem; /* Add margin as needed */
+  }
+
+  @media (max-width: 767px) {
+    .content-container {
+      margin-top: 6rem;
+    }
+  }
+
+.centered {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 2rem; /* Add margin as needed */
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #ffffff;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100%25'%3E%3Cdefs%3E%3ClinearGradient id='a' gradientUnits='userSpaceOnUse' x1='0' x2='0' y1='0' y2='100%25' gradientTransform='rotate(206,768,351)'%3E%3Cstop offset='0' stop-color='%23ffffff'/%3E%3Cstop offset='1' stop-color='%23F4F4F4'/%3E%3C/linearGradient%3E%3Cpattern patternUnits='userSpaceOnUse' id='b' width='300' height='250' x='0' y='0' viewBox='0 0 1080 900'%3E%3Cg fill-opacity='0.05'%3E%3Cpolygon fill='%23444' points='90 150 0 300 180 300'/%3E%3Cpolygon points='90 150 180 0 0 0'/%3E%3Cpolygon fill='%23AAA' points='270 150 360 0 180 0'/%3E%3Cpolygon fill='%23DDD' points='450 150 360 300 540 300'/%3E%3Cpolygon fill='%23999' points='450 150 540 0 360 0'/%3E%3Cpolygon points='630 150 540 300 720 300'/%3E%3Cpolygon fill='%23DDD' points='630 150 720 0 540 0'/%3E%3Cpolygon fill='%23444' points='810 150 720 300 900 300'/%3E%3Cpolygon fill='%23FFF' points='810 150 900 0 720 0'/%3E%3Cpolygon fill='%23DDD' points='990 150 900 300 1080 300'/%3E%3Cpolygon fill='%23444' points='990 150 1080 0 900 0'/%3E%3Cpolygon fill='%23DDD' points='90 450 0 600 180 600'/%3E%3Cpolygon points='90 450 180 300 0 300'/%3E%3Cpolygon fill='%23666' points='270 450 180 600 360 600'/%3E%3Cpolygon fill='%23AAA' points='270 450 360 300 180 300'/%3E%3Cpolygon fill='%23DDD' points='450 450 360 600 540 600'/%3E%3Cpolygon fill='%23999' points='450 450 540 300 360 300'/%3E%3Cpolygon fill='%23999' points='630 450 540 600 720 600'/%3E%3Cpolygon fill='%23FFF' points='630 450 720 300 540 300'/%3E%3Cpolygon points='810 450 720 600 900 600'/%3E%3Cpolygon fill='%23DDD' points='810 450 900 300 720 300'/%3E%3Cpolygon fill='%23AAA' points='990 450 900 600 1080 600'/%3E%3Cpolygon fill='%23444' points='990 450 1080 300 900 300'/%3E%3Cpolygon fill='%23222' points='90 750 0 900 180 900'/%3E%3Cpolygon points='270 750 180 900 360 900'/%3E%3Cpolygon fill='%23DDD' points='270 750 360 600 180 600'/%3E%3Cpolygon points='450 750 540 600 360 600'/%3E%3Cpolygon points='630 750 540 900 720 900'/%3E%3Cpolygon fill='%23444' points='630 750 720 600 540 600'/%3E%3Cpolygon fill='%23AAA' points='810 750 720 900 900 900'/%3E%3Cpolygon fill='%23666' points='810 750 900 600 720 600'/%3E%3Cpolygon fill='%23999' points='990 750 900 900 1080 900'/%3E%3Cpolygon fill='%23999' points='180 0 90 150 270 150'/%3E%3Cpolygon fill='%23444' points='360 0 270 150 450 150'/%3E%3Cpolygon fill='%23FFF' points='540 0 450 150 630 150'/%3E%3Cpolygon points='900 0 810 150 990 150'/%3E%3Cpolygon fill='%23222' points='0 300 -90 450 90 450'/%3E%3Cpolygon fill='%23FFF' points='0 300 90 150 -90 150'/%3E%3Cpolygon fill='%23FFF' points='180 300 90 450 270 450'/%3E%3Cpolygon fill='%23666' points='180 300 270 150 90 150'/%3E%3Cpolygon fill='%23222' points='360 300 270 450 450 450'/%3E%3Cpolygon fill='%23FFF' points='360 300 450 150 270 150'/%3E%3Cpolygon fill='%23444' points='540 300 450 450 630 450'/%3E%3Cpolygon fill='%23222' points='540 300 630 150 450 150'/%3E%3Cpolygon fill='%23AAA' points='720 300 630 450 810 450'/%3E%3Cpolygon fill='%23666' points='720 300 810 150 630 150'/%3E%3Cpolygon fill='%23FFF' points='900 300 810 450 990 450'/%3E%3Cpolygon fill='%23999' points='900 300 990 150 810 150'/%3E%3Cpolygon points='0 600 -90 750 90 750'/%3E%3Cpolygon fill='%23666' points='0 600 90 450 -90 450'/%3E%3Cpolygon fill='%23AAA' points='180 600 90 750 270 750'/%3E%3Cpolygon fill='%23444' points='180 600 270 450 90 450'/%3E%3Cpolygon fill='%23444' points='360 600 270 750 450 750'/%3E%3Cpolygon fill='%23999' points='360 600 450 450 270 450'/%3E%3Cpolygon fill='%23666' points='540 600 630 450 450 450'/%3E%3Cpolygon fill='%23222' points='720 600 630 750 810 750'/%3E%3Cpolygon fill='%23FFF' points='900 600 810 750 990 750'/%3E%3Cpolygon fill='%23222' points='900 600 990 450 810 450'/%3E%3Cpolygon fill='%23DDD' points='0 900 90 750 -90 750'/%3E%3Cpolygon fill='%23444' points='180 900 270 750 90 750'/%3E%3Cpolygon fill='%23FFF' points='360 900 450 750 270 750'/%3E%3Cpolygon fill='%23AAA' points='540 900 630 750 450 750'/%3E%3Cpolygon fill='%23FFF' points='720 900 810 750 630 750'/%3E%3Cpolygon fill='%23222' points='900 900 990 750 810 750'/%3E%3Cpolygon fill='%23222' points='1080 300 990 450 1170 450'/%3E%3Cpolygon fill='%23FFF' points='1080 300 1170 150 990 150'/%3E%3Cpolygon points='1080 600 990 750 1170 750'/%3E%3Cpolygon fill='%23666' points='1080 600 1170 450 990 450'/%3E%3Cpolygon fill='%23DDD' points='1080 900 1170 750 990 750'/%3E%3C/g%3E%3C/pattern%3E%3C/defs%3E%3Crect x='0' y='0' fill='url(%23a)' width='100%25' height='100%25'/%3E%3Crect x='0' y='0' fill='url(%23b)' width='100%25' height='100%25'/%3E%3C/svg%3E");
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+.full-width {
+    width: 100%;
+}
+
+.calendar-container {
+  margin: 2rem;
+}
+
+.enable-calendar {
+  margin-top: 2rem;
+}
+
+.accordion-container {
+  width: 90%; /* Set initial width */
+  max-width: 600px; /* Set maximum width */
+  margin: 0 auto; /* Center the container horizontally */
+}
+
+/* Adjust container size for smaller screens */
+@media (max-width: 767px) {
+  .accordion-container {
+    width: 100%; /* Set width to full width on smaller screens */
+    max-width: none; /* Remove maximum width on smaller screens */
+    margin: 0; /* Remove horizontal margin on smaller screens */
+  }
+}
+
+.greeting {
+  margin-top: 3rem;
+}
+
+@media (max-width: 767px) {
+  .greeting {
+    margin-top: 6rem;
+  }
+}
+
+/* CSS */
+.details-item {
+  display: flex;
+  justify-content: space-between; /* Align items at the ends */
+  align-items: center;
+}
+
+.details-key {
+  flex: 1; /* Take up all available space on the left */
+}
+
+.details-value {
+  flex: 2; /* Take up all available space on the right */
+  text-align: right; /* Align text to the right */
+}
+
+
+/* -------------------- BURGER MENU ----------------------- */
+
+.burger {
+  background-color: #f9f9f9;
+  margin: 0;
+  padding: 0;
+}
+a {
+  text-decoration: none;
+  color: #1E1E23;
+  opacity:1;
+  /* font-family: 'work sans', sans serif; */
+  font-size: 1.3rem;
+  font-weight: 400;
+  transition: 200ms;
+}
+a:hover {
+  opacity:0.5;
+}
+ul {
+  padding: 0;
+  list-style-type: none;
+}
+
+
+
+.container {
+  margin-top: 50px; 
+  Display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.phone {
+  background-color: #36383F;
+  border-radius: 40px;
+  width: 300px;
+  height: 600px;
+  Display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 30px 50px 100px #85888C;
+}
+.content {
+  border: 1px solid #36383F;
+  border-radius: 20px;
+  width: 94%;
+  height: 91%;
+  background-color: #F5F6FA;
+  overflow: hidden;
+}
+nav {
+  background-color: #1E1E23;
+  height: 65px;
+  z-index: 999;
+}
+
+
+#menuToggle {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  top: 25px;
+  left: 25px;
+  z-index: 1;
+  -webkit-user-select: none;
+  user-select: none;
+}
+
+#menuToggle input
+{
+  display: flex;
+  width: 40px;
+  height: 32px;
+  position: absolute;
+  cursor: pointer;
+  opacity: 0;
+  z-index: 2;
+}
+
+#menuToggle .burger-span
+{
+  display: flex;
+  width: 29px;
+  height: 2px;
+  margin-bottom: 5px;
+  position: relative;
+  background: #ffffff;
+  border-radius: 3px;
+  z-index: 1;
+  transform-origin: 5px 0px;
+  transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
+              background 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
+              opacity 0.55s ease;
+}
+
+#menuToggle span:first-child
+{
+  transform-origin: 0% 0%;
+}
+
+#menuToggle span:nth-last-child(2)
+{
+  transform-origin: 0% 100%;
+}
+
+#menuToggle input:checked ~ span
+{
+  opacity: 1;
+  transform: rotate(45deg) translate(-3px, -1px);
+  background: #36383F;
+}
+#menuToggle input:checked ~ span:nth-last-child(3)
+{
+  opacity: 0;
+  transform: rotate(0deg) scale(0.2, 0.2);
+}
+
+#menuToggle input:checked ~ span:nth-last-child(2)
+{
+  transform: rotate(-45deg) translate(0, -1px);
+}
+
+#menu
+{
+  position: absolute;
+  width: 180px;
+  height: 400px;
+  box-shadow: 0 0 10px #85888C;
+  margin: -50px 0 0 -50px;
+  padding-left: 50px;
+  padding-right: 10px;
+  padding-top: 125px;
+  background-color: #F5F6FA;
+  -webkit-font-smoothing: antialiased;
+  transform-origin: 0% 0%;
+  transform: translate(-100%, 0);
+  transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
+  
+}
+
+#menu li
+{
+  padding: 10px 0;
+  transition-delay: 2s;
+}
+
+#menuToggle input:checked ~ ul
+{
+  transform: none;
+}
+
+.burger-menu {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif; /* Bootstrap's default font stack */
+  display: none; /* Hide burger menu by default */
+  cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  .burger-menu {
+    width: 100%;
+    display: block; /* Show burger menu on smaller screens */
+    cursor: pointer;
+    position: fixed; /* Fix the burger menu position */
+    top: 0; /* Adjust the distance from the top */
+    left: 0; /* Adjust the distance from the left */
+    z-index: 1500;
+    }
+}
+
+.pending-badge {
+  margin-bottom: 3rem;
+}
+
+.request-item {
+  display: flex;
+  justify-content: space-between; /* Align items at the ends */
+  align-items: center;
+}
+
+.request-key {
+  flex: 1; /* Take up all available space on the left */
+  
+}
+
+.request-value {
+  flex: 2; /* Take up all available space on the right */
+  text-align: right; /* Align text to the right */
+}
+
+.request-blocks {
+  width: 400px;
+}
+
+@media (max-width: 768px) {
+  .request-blocks {
+    width: 80%;
+  }
+}
+
+.request-container {
+  margin: 1rem;
+}
+
+.request-listgroup {
+  border-radius: 8px;
+}
+
+.employee-nav {
+  background-color: #333; /* Background color */
+  color: #fff; /* Text color */
+  padding: 10px; /* Padding around content */
+  width: 100%; /* Full width */
+  position: fixed; /* Fixed position */
+  top: 0; /* Top of the page */
+  left: 0; /* Left of the page */
+  z-index: 500; /* Ensure it appears above other content */
+}
+
+@media (min-width: 768px) {
+  .employee-nav {
+    display: none; /* Hide navigation bar for screens larger than 768px */
+  }
+}
+
+.employee-homepage {
+  background-color: transparent; /* Background color */
+  padding: 20px; /* Padding around content */
+  width: 80%; /* Set width of the div */
+  max-width: 400px; /* Maximum width of the div */
+  margin: 0 auto; /* Center horizontally */
+  text-align: center; /* Center align text content */
+}
+
+.employee-homepage h1 {
+  margin-bottom: 20px; /* Add some space below the heading */
+}
+
+.employee-homepage button {
+  margin: 10px; /* Add some space around buttons */
+}
+
+.calendar-below {
+  display: flex;
+  justify-content: center; /* Center horizontally */
+  align-items: center; /* Center vertically */
+}
+
+.messages-container {
+  display: block;
+  justify-content: center; /* Center horizontally */
+  align-items: center; /* Center vertically */
+  width: 400px;
+  margin: 0 auto;
+  /* height: 100vh; Set the height to 100% of the viewport height */
+}
+
+@media (min-width: 768px) {
+  .messages-container {
+    width: 400px; /* Set width to 400px on desktop */
+  }
+}
+
+/* For mobile screens */
+@media (max-width: 767px) {
+  .messages-container {
+    width: 100%; /* Set width to 80% on mobile devices */
+  }
+}
+
+.chat-container {
+  max-height: 400px;
+  overflow-y:scroll;
+}
+
+.mb-3 {
+  margin-top: 1rem;
+}
+
+.employee-buttons {
+  position: absolute;
+  top: 10px; 
+  right: calc(50px + 20px * 3); /* Adjust as needed based on the width of buttons */
+  display: block;
+  /* align-items: center; */
+  /* justify-content: flex-end; */
+  margin: 2rem;
+}
+
+@media (max-width: 767px) {
+  .employee-buttons {
+      position: static; /* Reset position for smaller screens */
+      right: auto; /* Reset right property for smaller screens */
+      display: none;
+      flex-wrap: wrap; /* Allow buttons to wrap to the next line */
+      justify-content: center; /* Center align buttons */
+      margin-top: 1rem; /* Adjust margin as needed */
+  }
+}
+
+.Calendar__day.-selected, .Calendar__day.-selectedStart, .Calendar__day.-selectedEnd {
+  background-color: #85888C;
+}
+
+@media (max-width: 767px) {
+  .modal-open .modal-dialog {
+    margin-top: 40%; /* Adjust the percentage as needed */
+  }
+}
