@@ -20,7 +20,7 @@ export default function AdminEnableCalendar({ onModifyDays }) {
 
     function handleEnableDays(daysToDelete) {
         // Assuming dayToDelete is an object with day, month, and year properties
-        fetch('http://localhost:5000/admin/delete-disabled-day', {
+        fetch('https://holidays-project-backend.onrender.com/admin/delete-disabled-day', {
             method: 'DELETE',
             headers: {
                 'Content-Type': 'application/json'
@@ -74,7 +74,7 @@ export default function AdminEnableCalendar({ onModifyDays }) {
       const data = JSON.stringify(selectedDays);
       console.log(data);
   
-      fetch("http://localhost:5000/admin/disable-days", {
+      fetch("https://holidays-project-backend.onrender.com/admin/disable-days", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

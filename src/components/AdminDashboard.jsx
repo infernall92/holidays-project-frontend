@@ -46,7 +46,7 @@ export default function AdminDashboard({ onLogout }) {
   async function fetchPendingRequests() {
     try {
       const response = await fetch(
-        "http://localhost:5000/admin/pending-requests"
+        "https://holidays-project-backend.onrender.com/admin/pending-requests"
       );
       const data = await response.json();
 
@@ -129,7 +129,7 @@ export default function AdminDashboard({ onLogout }) {
     // Perform additional logic as needed
 
     try {
-      await fetch(`http://localhost:5000/admin/approve-request/${id}`, {
+      await fetch(`https://holidays-project-backend.onrender.com/admin/approve-request/${id}`, {
         method: "PUT",
         headers: { "Content-Type": "application/json" },
         // You can optionally include a request body if needed
@@ -178,7 +178,7 @@ export default function AdminDashboard({ onLogout }) {
     console.log(data);
 
     // Make a POST request using fetch
-    fetch("http://localhost:5000/admin/disable-days", {
+    fetch("https://holidays-project-backend.onrender.com/admin/disable-days", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -206,7 +206,7 @@ export default function AdminDashboard({ onLogout }) {
     dispatch(requestActions.removePendingRequest(id));
     // Perform additional logic as needed
     try {
-      await fetch(`http://localhost:5000/admin/pending-requests/${id}`, {
+      await fetch(`https://holidays-project-backend.onrender.com/admin/pending-requests/${id}`, {
         method: "DELETE",
       });
       console.log("Request declined:", id);

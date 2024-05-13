@@ -12,7 +12,7 @@ export default function EmployeeListPage() {
   }, []);
 
   function fetchEmployees() {
-    fetch("http://localhost:5000/admin/employees")
+    fetch("https://holidays-project-backend.onrender.com/admin/employees")
       .then((response) => response.json())
       .then((data) => {
         setBackendData(data.employees);

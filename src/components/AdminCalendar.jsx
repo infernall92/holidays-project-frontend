@@ -17,7 +17,7 @@ export default function AdminCalendar() {
   }, [buttonClicked]); // Empty dependency array ensures the effect runs only once on mount
 
   function fetchDisabledDays() {
-    fetch("http://localhost:5000/admin/get-disabled-days")
+    fetch("https://holidays-project-backend.onrender.com/admin/get-disabled-days")
       .then((response) => {
         if (!response.ok) {
           throw new Error("Failed to fetch disabled days");
@@ -39,7 +39,7 @@ export default function AdminCalendar() {
     const data = JSON.stringify(selectedDays);
     console.log(data);
 
-    fetch("http://localhost:5000/admin/disable-days", {
+    fetch("https://holidays-project-backend.onrender.com/admin/disable-days", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",

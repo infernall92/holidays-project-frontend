@@ -15,7 +15,7 @@ import { useSelector } from 'react-redux';
 export async function sendMessageToDatabase(senderId, senderName, receiverId, message) {
     try {
       if (message.trim() !== '') {
-        const response = await fetch('http://localhost:5000/messages/send', {
+        const response = await fetch('https://holidays-project-backend.onrender.com/messages/send', {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json',
@@ -55,7 +55,7 @@ export default function ChatWindow ({ sender, receiver }) {
   useEffect(() => {
     const fetchMessages = async () => {
       try {
-        const response = await fetch(`http://localhost:5000/messages/${senderId}/${receiverId}`);
+        const response = await fetch(`https://holidays-project-backend.onrender.com/messages/${senderId}/${receiverId}`);
         if (!response.ok) {
           throw new Error('Failed to fetch messages');
         }
@@ -79,7 +79,7 @@ export default function ChatWindow ({ sender, receiver }) {
   async function sendMessageToDatabase() {
     try {
       if (newMessage.trim() !== '') {
-        const response = await fetch('http://localhost:5000/messages/send', {
+        const response = await fetch('https://holidays-project-backend.onrender.com/messages/send', {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json',

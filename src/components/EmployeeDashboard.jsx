@@ -40,7 +40,7 @@ export default function EmployeeDashboard({ onLogout }) {
     async function fetchSignedUserName() {
       try {
           // Fetch all employees from the server
-          const response = await fetch('http://localhost:5000/admin/employees');
+          const response = await fetch('https://holidays-project-backend.onrender.com/admin/employees');
 
           if (!response.ok) {
               throw new Error('Failed to fetch employees');
@@ -76,7 +76,7 @@ export default function EmployeeDashboard({ onLogout }) {
 
   // console.log('Logged in:', user.firstName, user.lastName)
   function fetchDisabledDays() {
-    fetch("http://localhost:5000/admin/get-disabled-days")
+    fetch("https://holidays-project-backend.onrender.com/admin/get-disabled-days")
       .then((response) => {
         if (!response.ok) {
           throw new Error("Failed to fetch disabled days");
@@ -120,7 +120,7 @@ export default function EmployeeDashboard({ onLogout }) {
      
 
       fetch(
-        `http://localhost:5000/admin/pending-requests/${requestId}`,
+        `https://holidays-project-backend.onrender.com/admin/pending-requests/${requestId}`,
         requestOptions
       )
         .then((response) => response.json())

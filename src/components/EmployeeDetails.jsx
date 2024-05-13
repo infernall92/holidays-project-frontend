@@ -33,7 +33,7 @@ export default function EmployeeDetails({
     async function fetchRequestsByEmployee() {
       try {
         const response = await fetch(
-          `http://localhost:5000/admin/pending-requests?userId=${id}`
+          `https://holidays-project-backend.onrender.com/admin/pending-requests?userId=${id}`
         );
         const data = await response.json();
 

@@ -25,7 +25,7 @@ export default function NewEmployeeForm() {
   }, []);
 
   function fetchEmployees() {
-    fetch("http://localhost:5000/admin/employees")
+    fetch("https://holidays-project-backend.onrender.com/admin/employees")
       .then((response) => response.json())
       .then((data) => {
         setBackendData(data.employees);
@@ -56,7 +56,7 @@ export default function NewEmployeeForm() {
       body: JSON.stringify(newEmployee),
     };
 
-    fetch("http://localhost:5000/admin/employees/addEmployee", requestOptions)
+    fetch("https://holidays-project-backend.onrender.com/admin/employees/addEmployee", requestOptions)
       .then((response) => {
         if (!response.ok) {
           throw new Error("Network response was not ok");

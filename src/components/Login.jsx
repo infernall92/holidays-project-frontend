@@ -19,7 +19,7 @@ export default function Login({ onLogin }) {
   useEffect(() => {
     // Fetch employees when the component mounts
     function fetchEmployees() {
-      fetch("http://localhost:5000/admin/employees")
+      fetch("https://holidays-project-backend.onrender.com/admin/employees")
         .then((response) => response.json())
         .then((data) => {
           dispatch(loginActions.setEmployees(data.employees));
@@ -30,7 +30,7 @@ export default function Login({ onLogin }) {
     } 
 
     function fetchAdmins() {
-      fetch("http://localhost:5000/admin/admins")
+      fetch("https://holidays-project-backend.onrender.com/admin/admins")
         .then((response) => response.json())
         .then((data) => {
           dispatch(loginActions.setAdmins(data.admins));
